@@ -1,0 +1,19 @@
+<!-- register_user.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register User</title>
+</head>
+<body>
+    <form method="post" action="{% url 'register_user' %}">
+        {% csrf_token %}
+        
+        {{ user_info_form.as_p }}
+        
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
